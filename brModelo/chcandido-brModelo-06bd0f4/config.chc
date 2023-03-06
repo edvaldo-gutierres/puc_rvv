@@ -1,0 +1,16 @@
+#Config
+#Mon Mar 06 14:35:09 BRT 2023
+cfg.ancorador=true
+cfg.autosalvarintervalo=5
+cfg.mostrargrade=true
+cfg.apagartextoaoeditar=true
+cfg.location.y=-8
+cfg.location.x=-1929
+cfg.mostrardimensoesaomover=true
+cfg.gradelargura=23
+cfg.mostrartooltips=true
+cfg.tipodefault=0
+cfg.mostrarids=false
+cfg.recentes=C\:\\Users\\edvaldo.ferreira\\Documents\\Faculdade Engenharia de Dados\\2023_01\\Projeto Banco de Dados\\L\u00F3gico_1.brM3;C\:\\Users\\edvaldo.ferreira\\Documents\\Faculdade Engenharia de Dados\\2023_01\\Projeto Banco de Dados\\ER.brM3;C\:\\Users\\edvaldo.ferreira\\Documents\\Faculdade Engenharia de Dados\\2023_01\\Projeto Banco de Dados\\L\u00F3gico_1.xml
+cfg.location.salvar=true
+cfg.propaguedeletetolines=true
