@@ -18,19 +18,6 @@ SELECT Matricula_do_Colaborador,
 FROM [dbo].[Colaborador];
 
 
-SELECT id_comissao,
-       Matricula_do_Colaborador,
-       Codigo_do_Indicador,
-       Competencia,
-       Valor_do_Resultado,
-       Valor_da_Meta,
-       Atingimento,
-       Peso_do_Indicador,
-       Base_Calculo,
-       Comissao
-FROM [dbo].[Comissao];
-
-
 SELECT Codigo_do_Departamento,
        Nome_do_Departamento,
        Status_do_Departamento
@@ -59,7 +46,19 @@ FROM [dbo].[Indicadores];
 SELECT id_resultado,
        Matricula_do_Colaborador,
        Codigo_do_Indicador,
-       Inicio_Vigencia,
-       Final_Vigencia,
+       Competencia,
        Valor_do_Resultado
 FROM [dbo].[Resultado];
+
+
+SELECT id_comissao,
+       Matricula_do_Colaborador,
+       Codigo_do_Indicador,
+       Competencia,
+       Valor_do_Resultado,
+       Valor_da_Meta,
+       Atingimento,
+       Peso_do_Indicador,
+       Base_Calculo,
+       Comissao
+FROM [dbo].[Comissao];

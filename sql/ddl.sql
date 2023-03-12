@@ -74,7 +74,7 @@ CREATE TABLE dbo.Indicadores
     Codigo_do_Cargo INT NOT NULL,
     Peso_do_Indicador DECIMAL(32, 8) NOT NULL,
     Inicio_Vigencia DATE NOT NULL,
-    Final_Vigencia DATE NOT NULL,
+    Final_Vigencia DATE NULL,
 	CONSTRAINT PK_Indicadores PRIMARY KEY (Codigo_do_Indicador)
 );
 
@@ -98,7 +98,7 @@ CREATE TABLE dbo.Meta (
     Matricula_do_Colaborador INT NOT NULL,
     Codigo_do_Indicador INT NOT NULL,
     Inicio_Vigencia DATE NOT NULL,
-    Final_Vigencia DATE NOT NULL,
+    Final_Vigencia DATE NULL,
     Valor_da_Meta DECIMAL(32,8) NOT NULL,
 	CONSTRAINT PK_Meta PRIMARY KEY (id_meta)
 );
@@ -120,8 +120,7 @@ CREATE TABLE dbo.Resultado (
 	id_resultado INT NOT NULL IDENTITY(1,1),
     Matricula_do_Colaborador INT NOT NULL,
     Codigo_do_Indicador INT NOT NULL,
-    Inicio_Vigencia DATE NOT NULL,
-    Final_Vigencia DATE NOT NULL,
+    Competencia DATE NOT NULL,
     Valor_do_Resultado DECIMAL(32,8) NOT NULL,
     CONSTRAINT PK_Resultado PRIMARY KEY (id_resultado)
 );
@@ -156,7 +155,4 @@ CREATE TABLE dbo.Comissao (
 
 ALTER TABLE dbo.Comissao ADD CONSTRAINT FK_Comissao_Colaborador	FOREIGN KEY (Matricula_do_Colaborador)	REFERENCES dbo.Colaborador (Matricula_do_Colaborador);
 ALTER TABLE dbo.Comissao ADD CONSTRAINT FK_Comissao_Indicador	FOREIGN KEY (Codigo_do_Indicador)		REFERENCES dbo.Indicadores (Codigo_do_Indicador);
---ALTER TABLE dbo.Comissao ADD CONSTRAINT FK_Comissao_Meta		FOREIGN KEY (Codigo_do_Indicador)		REFERENCES dbo.Meta (Codigo_do_Indicador);
---ALTER TABLE dbo.Comissao ADD CONSTRAINT FK_Comissao_Resultado	FOREIGN KEY (Codigo_do_Indicador)		REFERENCES dbo.Resultado (Codigo_do_Indicador);
-
 ;
