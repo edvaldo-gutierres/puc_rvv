@@ -68,6 +68,7 @@ BEGIN
             ON c2.Codigo_do_Cargo = c.Codigo_do_Cargo
     WHERE c.Matricula_do_Colaborador = @matricula_usuario;
 
+
 	--BUSCA A MAIOR VIGENCIA
 	SELECT @maior_vigencia = MAX(m.Inicio_Vigencia) 
 	FROM dbo.Meta AS m
@@ -76,10 +77,10 @@ BEGIN
 
 
 	-- HIERARQUI PERMITIDA
-	SET @hierarquia_permitida = 2
+	SET @hierarquia_permitida = 2 -- HIERARQUIA DO USUARIO
 
 	-- HORARIO PERMITIDO
-	SET @hora_permitida = 19
+	SET @hora_permitida = 22
 
 
 
@@ -100,7 +101,8 @@ BEGIN
 			IF @inico_vigencia >= @data_controle 
 			BEGIN
 
-				IF @inico_vigencia >= @maior_vigencia
+				--VERIFICA SE HÁ META NO INTERVALO
+				IF @inico_vigencia >= ISNULL(@maior_vigencia,@inico_vigencia)
 				BEGIN
 
 					-- VERFICA SE O USUARIO TEM PERMISSÃO
@@ -148,7 +150,7 @@ BEGIN
 
 								PRINT 'ATUALIZA FINAL DA VIGENCIA DA META ANTERIOR';
 								UPDATE dbo.Meta
-								SET Final_Vigencia = EOMONTH(Inicio_Vigencia, 0)
+								SET Final_Vigencia = EOMONTH(@inico_vigencia, -1)
 								WHERE id_meta = @id_meta;
 								PRINT 'META ANTERIOR ATUALIZADA';
 
