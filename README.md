@@ -1,0 +1,7 @@
+# puc_rvv
+Repositório referente ao microfundamento Projeto de Banco de Dados Relacional da PUC Minas 2023
+
+Banco de dados para um sistema de gerenciamento de cálculo de remuneração variável de vendas (RVV) em empresas de vendas, considerando como pilares de cálculos a meta e o realizado de indicadores estratégicos conforme a visão de negócio proposta por sua diretoria comercial.  
+A priori os indicadores e suas metas são categorizados por departamento e cargos, onde o departamento são lotados por funcionários vendedores que atendem a um tipo de varejo (key account, mercado interno e e-commerce), e os cargos classificador por senioridades (sênior, pleno e júnior). Os indicadores são identificados por sequencia numérica exclusiva (id) e contem os atributos código e descrição dos departamentos e cargos, e suas datas de início e fim de vigência.
+Os funcionários são identificados por seu número de exclusivo de matrícula e contém os atributos nome, CPF, sexo, departamento, data de nascimento, cargo e salário. Cada vendedor será lotado em apenas um departamento e estará relacionando em apenas um cargo.
+A comissão será calculada com base nos indicadores, onde o índice de produtividade (I.P.) será medido pela divisão do realizado pela meta. O valor da comissão se dará pelo produto do I.P. e a base de cálculo. A base de cálculo é categorizada por cargos de gestão e operacional, onde a definição se dá por percentual do salário e percentual do faturamento bruto, respectivamente. 
