@@ -14,7 +14,8 @@ SELECT Matricula_do_Colaborador,
        Data_Nascimento,
        Codigo_do_Departamento,
        Codigo_do_Cargo,
-       Salario
+       Salario,
+	   Status_do_Colaborador
 FROM [dbo].[Colaborador];
 
 

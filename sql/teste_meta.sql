@@ -14,8 +14,8 @@ DECLARE @matricula_usuario INT,
 SET @procedimento = 1
 SET @matricula_usuario = 1000002
 SET @matricula_supervisor = 1000005
-SET @cod_indicador = 1
-SET @inico_vigencia = '2023-03-01'
+SET @cod_indicador = 5
+SET @inico_vigencia = '2023-04-01'
 SET @valor_meta = 380000;
 
 EXEC dbo.spr_meta_supervisor @procedimento = @procedimento,					-- int (1 INSERT | 2 UPDATE | 3 DELETE )
